@@ -1,11 +1,12 @@
 import '../App.css';
 
-function Introduction() {
+function Introduction(props) {
     return (
         <div>
             <header>
                 <h1>Introduction</h1>
-                <p>Perkenalkan Nama Saya Elin Sopiah</p>
+                {/* props.name digunakan untuk memanggil atribut yang ada d index. name bisa d ganti dengan apa saja */}
+                <p>Perkenalkan Nama Saya {props.name}</p>
             </header>
         </div>
     );
