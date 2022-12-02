@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Profile from "./components/Profile";
 import Introduction from "./components/Introduction";
+import Time from "./components/Time";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Introduction name="Elin Sopiah"/>
     <Introduction name="Nurul Amelia"/>
     <Profile/>
+    <Time start="0"/>
   </React.StrictMode>
 );
 
