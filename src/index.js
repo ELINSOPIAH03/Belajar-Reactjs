@@ -6,6 +6,7 @@ import Profile from "./components/Profile";
 import Introduction from "./components/Introduction";
 import Time from "./components/Time";
 import Handlerevent from "./components/Handlerevent";
+import Form from "./components/Formpengirim";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <Profile/>
     <Time start="0"/>
     <Handlerevent/>
+    <Form/>
   </React.StrictMode>
 );
 
