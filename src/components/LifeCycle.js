@@ -7,7 +7,7 @@ class LifeCycle extends Component {
             name : '',
             stillType : '', 
         }
-        this.setStillType = this.setStillType.bind(this)
+        // this.setStillType = this.setStillType.bind(this)
     }
 
     setName = (e) =>{
@@ -18,7 +18,7 @@ class LifeCycle extends Component {
         })
     }
 
-    setStillType(){
+    setStillType = () =>{
         this.setState({
             stillType : false,
         })
