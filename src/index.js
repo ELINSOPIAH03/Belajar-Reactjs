@@ -7,6 +7,7 @@ import Introduction from "./components/Introduction";
 import Time from "./components/Time";
 import Handlerevent from "./components/Handlerevent";
 import Form from "./components/Formpengirim";
+import LifeCycle from './components/LifeCycle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
     <Time start="0"/>
     <Handlerevent/>
     <Form/>
+    <LifeCycle/>
   </React.StrictMode>
 );
 
