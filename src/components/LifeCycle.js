@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as Services from "../services/Index";
 
 class LifeCycle extends Component {
     constructor (props) {
@@ -29,8 +30,13 @@ class LifeCycle extends Component {
         this.setState({
             stillType: false,
         })
+        this.createRequest()
     }
 
+    createRequest = async()=>{
+        let respon = await Services.loadApiMovie()
+        console.log(respon);
+    }
     componentDidUpdate(){
         console.log('componen melakukan update');
     }
