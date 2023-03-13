@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as Services from "../services/Index";
+import Movies from './Movies';
 
 class LifeCycle extends Component {
     constructor (props) {
@@ -7,6 +8,7 @@ class LifeCycle extends Component {
         this.state = {
             name : '',
             stillType : '', 
+            movies: []
         }
         // this.setStillType = this.setStillType.bind(this)
     }
@@ -35,13 +37,16 @@ class LifeCycle extends Component {
 
     createRequest = async()=>{
         let respon = await Services.loadApiMovie()
-        console.log(respon);
+        this.setState({
+            movies : respon.data.movies
+        })
     }
     componentDidUpdate(){
         console.log('componen melakukan update');
     }
     
     render() {
+        console.log(this.state.movies);
         if (this.state.stillType===true) {
             return (
                 <div>
@@ -65,7 +70,7 @@ class LifeCycle extends Component {
                 <p>
                     hallo {this.state.name}
                 </p>
-                
+                <Movies data={this.state.movies}></Movies>
             </div>
         );
     }
